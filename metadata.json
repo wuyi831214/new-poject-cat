@@ -1,0 +1,7 @@
+{
+  "name": "PawPals Pet Adoption",
+  "description": "A comprehensive pet adoption platform with discovery, detailed pet profiles, and a streamlined multi-step application process.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

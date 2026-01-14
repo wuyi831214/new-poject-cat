@@ -1,0 +1,9 @@
+-- 插入示例宠物数据
+INSERT INTO pets (name, breed, age, gender, weight, distance, location, image, tags, description, status, price) VALUES
+('Luna', '英国短毛猫', '2 岁', '母', '4.2 公斤', '2.4 英里', '幸福市, 庇护所路 123 号', 'https://lh3.googleusercontent.com/aida-public/AB6AXuDkQElfZ163cNv5M4ASt3Ag1vNqjVITvBIc4pxh8FQAQPQReBcbgImBSTS1IBoDu3hlQQ3N6z-JG1qCN-KXaaczhyhJwJ4q74xjSA7k-HLKdxjCsDaYqRsOwLlCQqe-urGqHIwrgouWPPnc7A6TYwnuU-GnxuFvmBBafh3yjdD2DBqRB8YSnk4zzHQYcjLQ6cnpeUMw75C6o8IHNKBh97qSQkLkRSNfPKD8xB-mmxXhTF4RLclhcXzYi0ykfxI5JfK8O8BCmTEznQc', ARRAY['已接种疫苗', '已绝育', '习惯良好'], 'Luna 性格温顺，喜欢阳光充足的地方和安静的午后。刚开始她可能会有点害羞，但一旦熟悉起来，她会是你最忠诚的伙伴。她特别喜欢羽毛玩具和零食！', '待领养', 75),
+('Max', '金毛寻回犬', '2 岁', '公', '25 公斤', '2.5 公里', '快乐社区 8 号', 'https://lh3.googleusercontent.com/aida-public/AB6AXuA9PvlVJ6g6egE-jXQBZ9XZQbyjvlac8pHr-X7MuFmI9b51cJo7zRDCOPX1VDoeyTf3-8ynSs9dL6RLNosZGIjztXZQw9h2JhP0ctMwlvsAsXbEZs4g89iWrDyt0CtXFDtl8oXg-f6ZFDkL66M8_3GnZyKhZ_2p-vRyzNmWKy-3GBRmahBCu95-pENot31AUZ-lbwxPFl1NswDEw4DVm8YeHjwk3PtcxILbLQoVV_C41dNmm_b7L6CcQg_attqPAV8CJ0koRl_h5DY', ARRAY['活泼', '友善', '已培训'], 'Max 是一个精力充沛的男孩，他喜欢在草地上奔跑，对每一个人都很友好。', '待领养', 120),
+('Charlie', '串串', '4 个月', '公', '3 公斤', '1.2 公里', '路边救助站', 'https://lh3.googleusercontent.com/aida-public/AB6AXuBg6zUYYDB2OQ7mtOjhoz9YN2NHRb2kDJtwntQPvTCjt-aOv8F7jwlEx-s0-hUrsAvNmh_YM5pKfXk9GnfI7uVLGqeFBOnbWGUs5eCUhCmlCyO7yhD0BeSSrbIi9UlE_P3igqJlresA4jTHy6aQL6xufkZhGGoJHSwdgRieZCrhMYclbjtao1k0w9TMQTwokdwAR7QC7ilW8bnnUFYWP5rGSR1i1mJY6ukXGiOYkPUfuTgtbJbMg6mqQGfOyuLcq_nidu22Rn6M7-s', ARRAY['幼犬', '乖巧'], 'Charlie 是个害羞但非常温柔的小家伙，正在寻找一个永远的家。', '待领养', 50);
+
+-- 插入示例申请数据
+INSERT INTO applications (pet_id, user_name, user_email, user_phone, house_type, ownership_type, experience, reason, status) VALUES
+((SELECT id FROM pets WHERE name = 'Max'), 'Sarah Jenkins', 'sarah@example.com', '13800138000', '普通公寓', '租房', '有过经验', '我想给Max一个温暖的家，我会好好照顾他的。', '审核中');
